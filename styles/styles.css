@@ -148,7 +148,7 @@ section {
   /* Alto total */
   object-fit: cover;
   /* Cubre el área manteniendo proporciones */
-  z-index: 0;
+  z-index: 1;
   /* Se sitúa detrás del contenido */
   pointer-events: none;
   /* Evita que el usuario interactúe con el video */
