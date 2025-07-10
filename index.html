@@ -18,7 +18,7 @@
 
 <body>
   <nav>
-    <a href="#inicio">
+    <a href="#inicio" aria-label="Ir a inicio">
       <i data-lucide="home"></i>
       <span>Inicio</span>
     </a>
@@ -233,6 +233,25 @@
     lucide.createIcons();
   </script>
 
+
+
+<script>
+  const links = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  links.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const scrollPos = window.scrollY + window.innerHeight / 2;
+
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+});
+
+</script>
 
 
   <script>

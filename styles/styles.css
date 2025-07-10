@@ -28,14 +28,7 @@ body {
 }
 
 
-main {
-  margin-left: 80px;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-}
+
 
 section {
   flex: 0 0 100vw;
@@ -102,6 +95,14 @@ nav a span {
   color: var(--naranja);
 }
 
+nav a.active span {
+  color: var(--amarillo-suave);
+}
+
+nav a.active i {
+  color: var(--amarillo-suave);
+}
+
 nav a:hover i {
   opacity: 1;
   transform: translateY(0);
@@ -114,6 +115,14 @@ nav a:hover span {
 }
 
 
+@media (max-width: 712px) {
+  nav a i {
+    font-size: 28px;
+  }
+  nav {
+    background: var(--azul-petroleo);
+  }
+}
 
 main {
   margin-left: 80px;
