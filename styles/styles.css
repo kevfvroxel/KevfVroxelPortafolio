@@ -57,13 +57,14 @@ header {
 }
 
 
+
 nav {
   position: fixed;
   left: 0;
   top: 0;
   width: 100px;
   height: 100vh;
-  background-color: var(--azul-petroleo);
+  background: linear-gradient(180deg, var(--azul-petroleo), var(--azul-oscuro));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,41 +74,43 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--violeta);
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 80px;
 }
 
 nav a i {
   opacity: 0;
-  transform: translateY(-10px), translateY(90PX);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  margin-bottom: 4px;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-size: 24px;
   color: var(--naranja);
-  /* puedes ajustar este color */
-}
-
-nav a:hover i {
-  opacity: 1;
-  transform: translateY(-90);
-  
 }
 
 nav a span {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  color: var(--naranja);
+}
+
+nav a:hover i {
+  opacity: 1;
+  transform: translateY(0);
+  
 }
 
 nav a:hover span {
   opacity: 0;
-  color: var(--naranja);
+  transform: scale(0.9);
 }
 
 
