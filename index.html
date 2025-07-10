@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kevf Vroxel | Portafolio</title>
- <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Lato&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
- 
+
 </head>
+
 <body>
   <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#acerca">Acerca de mí</a>
-    <a href="#portafolio">Portafolio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Blog/Contacto</a>
+    <a href="#inicio">
+      <i data-lucide="home"></i>
+      <span>Inicio</span>
+    </a>
+    <a href="#acerca">
+      <i data-lucide="user"></i>
+      <span>Sobre mí</span>
+    </a>
+    <a href="#portafolio">
+      <i data-lucide="briefcase"></i>
+      <span>Portafolio</span>
+    </a>
+    <a href="#servicios">
+      <i data-lucide="settings"></i>
+      <span>Servicios</span>
+    </a>
+    <a href="#contacto">
+      <i data-lucide="mail"></i>
+      <span>Contacto</span>
+    </a>
   </nav>
   <main id="scrollContainer">
     <section id="inicio">
       <div class="hero-video">
-        <iframe src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" 
-          frameborder="0" allow="autoplay; fullscreen" allowfullscreen 
-          preload="none" loading="lazy">
-        </iframe>
+        <video autoplay muted loop playsinline preload="none" loading="lazy" >
+          <source src="images/videoKevfVroxel.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
@@ -41,19 +57,24 @@
           <!-- Reemplaza con tu foto -->
           <img src="images/logocompleto.png" alt="Foto de Kevf Vroxel">
         </div>
-    <div class="about-text" data-aos="fade-left">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy Kevf Vroxel, un productor multimedia apasionado por el arte digital, donde la creatividad se encuentra con la tecnología. 
-        Mi trabajo se inspira en el concepto del <strong>pixel en 3D</strong>, fusionando lo técnico con lo artístico para dar vida a soluciones visuales impactantes.
-      </p>
-      <p>
-        A través de Kevf Vroxel, busco crear experiencias que reflejen innovación, precisión y dinamismo. Cada proyecto es una oportunidad para transformar ideas abstractas en realidades visuales de alto impacto, manteniendo siempre una estética moderna, fresca y de alta calidad.
-      </p>
-      <p>
-        Me considero una persona comprometida, detallista y en constante evolución, con la visión de posicionar esta marca como un referente dentro de la industria creativa.
-      </p>
-    </div>
+        <div class="about-text" data-aos="fade-left">
+          <h2>Sobre mí</h2>
+          <p>
+            Soy Kevf Vroxel, un productor multimedia apasionado por el arte digital, donde la creatividad se encuentra
+            con la tecnología.
+            Mi trabajo se inspira en el concepto del <strong>pixel en 3D</strong>, fusionando lo técnico con lo
+            artístico para dar vida a soluciones visuales impactantes.
+          </p>
+          <p>
+            A través de Kevf Vroxel, busco crear experiencias que reflejen innovación, precisión y dinamismo. Cada
+            proyecto es una oportunidad para transformar ideas abstractas en realidades visuales de alto impacto,
+            manteniendo siempre una estética moderna, fresca y de alta calidad.
+          </p>
+          <p>
+            Me considero una persona comprometida, detallista y en constante evolución, con la visión de posicionar esta
+            marca como un referente dentro de la industria creativa.
+          </p>
+        </div>
     </section>
 
     <!-- Sección PORTAFOLIO-->
@@ -98,7 +119,7 @@
       </div>
     </section>
 
-   <!-- Sección SERVICIO-->
+    <!-- Sección SERVICIO-->
 
     <section id="servicios">
       <div class="services-container">
@@ -107,13 +128,15 @@
           <!-- Servicio 1: Producción Multimedia -->
           <div class="service-card" data-aos="fade-right">
             <h3>Producción Multimedia</h3>
-            <p>Desde conceptuales hasta promocionales, creamos piezas audiovisuales impactantes que comunican con fuerza visual.</p>
+            <p>Desde conceptuales hasta promocionales, creamos piezas audiovisuales impactantes que comunican con fuerza
+              visual.</p>
           </div>
 
           <!-- Servicio 2: Diseño Gráfico y Digital -->
           <div class="service-card" data-aos="fade-left">
             <h3>Diseño Gráfico y Digital</h3>
-            <p>Soluciones visuales creativas usando herramientas como Illustrator y Photoshop para marcas, productos y campañas.</p>
+            <p>Soluciones visuales creativas usando herramientas como Illustrator y Photoshop para marcas, productos y
+              campañas.</p>
           </div>
 
           <!-- Servicio 3: Animación y Motion Graphics -->
@@ -137,7 +160,7 @@
       </div>
     </section>
 
-   <!-- Sección CONTACTO Y BLOG-->
+    <!-- Sección CONTACTO Y BLOG-->
 
     <section id="contacto">
       <div class="contact-container">
@@ -174,7 +197,7 @@
       </div>
     </section>
 
-<!-- Sección Footer -->
+    <!-- Sección Footer -->
     <section id="footer">
       <div class="footer-container">
         <p>&copy; 2025 Kevf Vroxel. Todos los derechos reservados.</p>
@@ -190,11 +213,12 @@
 
 
 
-  
+  <script src="https://unpkg.com/lucide@latest"></script>
+
   <script>
     const container = document.getElementById('scrollContainer');
 
-    container.addEventListener('wheel', function(e) {
+    container.addEventListener('wheel', function (e) {
       e.preventDefault();
       container.scrollBy({
         left: e.deltaY < 0 ? -window.innerWidth : window.innerWidth,
@@ -202,14 +226,35 @@
       });
     }, { passive: false });
   </script>
+
   <script>
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
-    });
-     });
+    lucide.createIcons();
   </script>
 
+
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      const iconName = link.getAttribute('data-icon');
+      const icon = lucide(iconName);
+      icon.setAttribute('width', '24');
+      icon.setAttribute('height', '24');
+      icon.style.position = 'absolute';
+      icon.style.left = '-45px';
+      icon.style.top = '50%';
+      icon.style.transform = 'translateY(-50%)';
+      icon.style.opacity = '0';
+      icon.style.transition = 'opacity 0.3s ease';
+      link.appendChild(icon);
+
+      link.addEventListener('mouseenter', () => {
+        icon.style.opacity = '1';
+      });
+      link.addEventListener('mouseleave', () => {
+        icon.style.opacity = '0';
+      });
+    });
+  </script>
   <!-- Inicialización de AOS -->
   <script>
     AOS.init({
@@ -218,5 +263,7 @@
     });
   </script>
 
+
 </body>
+
 </html>
