@@ -1,6 +1,5 @@
 // 🔘 Scroll suave al contacto
 
-
   // 👁️ Detectar cuando las habilidades entren en pantalla
 
   

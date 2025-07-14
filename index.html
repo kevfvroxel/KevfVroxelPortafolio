@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kevf Vroxel | Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Tipografías: Oswald (títulos) y Lato (textos) -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@600&display=swap"
@@ -94,7 +95,7 @@
 
         <div class="grid-categorias">
           <!-- Card 1: Diseño Gráfico -->
-          <div class="card-categoria diseño" onclick="window.open('https://link-a-tu-diseño.com')">
+          <div class="card-categoria diseño" data-aos="zoom-in" data-aos-delay="10" onclick="window.open('https://link-a-tu-diseño.com')">
             <div class="overlay">
               <h3>Diseño Gráfico</h3>
               <p>Posters, branding y composiciones impactantes.</p>
@@ -231,6 +232,7 @@
 
   <!-- Script JS -->
   <script src="javascript.js"></script>
+ 
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -291,6 +293,13 @@
     });
   </script>
 
+ <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+ <script>
+   AOS.init({
+     duration: 1000,    // duración de la animación en milisegundos
+     once: true         // si quieres que la animación ocurra solo una vez
+   });
+ </script>
 </body>
 
 </html>
