@@ -2,57 +2,33 @@
 
 
   // 👁️ Detectar cuando las habilidades entren en pantalla
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.4
-  });
-  
-  document.querySelectorAll('.card-habilidad').forEach(card => {
-    observer.observe(card);
-  });
+
   
 
 
   // Efecto de entrada animada para las cards
-const portafolioCards = document.querySelectorAll('.card-categoria');
+  const cards = document.querySelectorAll('.card-categoria');
 
-const animarCards = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.3 });
-
-portafolioCards.forEach(card => animarCards.observe(card));
+  const animarCards = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll
+          ? entry.target.querySelectorAll('.card-categoria')
+          : [entry.target];
+  
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  cards.forEach(card => animarCards.observe(card));
 
 
 // ✨ Flotar cards con movimiento del mouse
-const cards = document.querySelectorAll('.card-categoria');
-
-cards.forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left; // posición X dentro de la card
-    const y = e.clientY - rect.top;  // posición Y dentro de la card
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = -(y - centerY) / 20;
-    const rotateY = (x - centerX) / 20;
-
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-  });
-});
 
 
 // Animar servicios al hacer scroll

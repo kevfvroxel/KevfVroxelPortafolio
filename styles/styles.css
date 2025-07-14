@@ -9,6 +9,11 @@ body {
   background-color: #1D2E48;
   overflow-x: hidden;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -27,8 +32,8 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  height: 1000px;
-  width: 150px;
+  height: 100vh;
+  width: 100px;
   background-color: #2C3B50;
   display: flex;
   flex-direction: column;
@@ -40,8 +45,24 @@ p {
 .navbar ul {
   list-style: none;
   display: flex;
+  padding: 0;
   flex-direction: column;
-  gap: 20px;
+  gap: 100px;
+}
+.navbar li a {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.navbar li {
+  position: relative;
+  top:0px;
+  left: 35px;
+  transform: rotate(-90deg);        /* Rota cada palabra */
+  transform-origin: left bottom; /* Ajusta el punto de rotación */
+  transition: transform 0.6s ease;   
 }
 
 .navbar a {
@@ -55,6 +76,28 @@ p {
   color: #FF4E00;
 }
 
+/* Icono invisible por defecto */
+.navbar li a::before {
+  content: '';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 25px;
+}
+
+/* Mostrar icono al hacer hover */
+.navbar li a:hover::before {
+  content: attr(data-icon);
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+
 @media (max-width: 768px) {
   .navbar {
       flex-direction: row;
@@ -67,9 +110,17 @@ p {
   .navbar ul {
       flex-direction: row;
       justify-content: space-around;
+      align-items: flex-start;
       width: 100%;
+      gap: 50px;
   }
-
+  .navbar li {
+    position: relative;
+    top:0px;
+    left: 0px;
+    transform: rotate(0);        /* Rota cada palabra */
+    transform-origin: center;   /* Ajusta el punto de rotación */
+  }
   .navbar a {
       writing-mode: horizontal-tb;
       text-orientation: initial;
@@ -81,14 +132,17 @@ p {
 
 .panel {
   min-width: 100vw;
-  height: 100vh;
-  padding: 40px;
+  min-height: 100vh;
+  height: auto;
+  padding: 40px 20px 40px 140px; /* deja espacio al lado izquierdo */
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: background 0.6s ease;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -124,6 +178,11 @@ p {
   /* fondo semitransparente */
   border-radius: 20px;
   animation: fadeIn 2s ease;
+  min-height: 250px; /* Ajusta según el espacio que necesitas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ✨ Animación de entrada */
@@ -144,7 +203,12 @@ p {
   font-size: 3rem;
   color: #FF4E00;
 }
-
+.apellido{
+  position: relative;
+  left: 59px;
+  top: -15px;
+  color: #A746BB;
+}
 .subtitulo {
   font-size: 1.2rem;
   color: #CBD6E2;
@@ -154,6 +218,7 @@ p {
 /* 🔘 Botón CTA */
 .cta-btn {
   background-color: #A746BB;
+  width: 150px;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -167,8 +232,59 @@ p {
   background-color: #FF4E00;
 }
 
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #CBD6E2;
+  font-family: monospace;
+  animation: typing 4s steps(40, end) 0.5s forwards, blink 0.2s step-end infinite;
+  width: 0; /* importante para la animación */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 45ch; } /* ajusta al número de caracteres del texto */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .apellido {
+    font-size: 1rem;
+  }
+
+  .subtitulo {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    width: 140px;
+    padding: 10px 20px;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    animation: typing 4s steps(30, end) 0.5s forwards, blink 0.2s step-end infinite;
+    width: 0;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 45ch; } /* Ajustado para mobile */
+  }
+}
+
+
 
 /* 🎨 SECCIÓN SOBRE MÍ */
+
 
 .sobre-mi {
   display: flex;
@@ -255,7 +371,7 @@ p {
   font-weight: bold;
   font-size: 1rem;
   box-shadow: 0 0 10px rgba(167, 70, 187, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
   cursor: default;
   opacity: 0;
   transform: translateY(40px);
@@ -287,10 +403,17 @@ p {
       flex-direction: column;
       text-align: center;
   }
+  .panel.sobre-mi {
+    height: 1300px;
+    min-height: 100vh;
+    padding-bottom: 80px; /* para evitar que quede muy pegado abajo */
+  }
 
-  .imagen-sobre-mi,
+  .imagen-sobre-mi{
+    max-width: 80%;
+  }
   .texto-sobre-mi {
-      max-width: 100%;
+      max-width: 80%;
   }
 }
 
@@ -300,12 +423,22 @@ p {
 .portafolio {
   background: #1D2E48;
   color: #D6C6E1;
-  min-width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  /* ✅ Deja espacio en la parte superior del contenido */
+  padding-top: 6rem;
+
+  position: relative;
+  z-index: 1; /* Asegura que esté sobre el fondo */
 }
 
 .contenedor-portafolio {
@@ -333,6 +466,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   perspective: 1000px;
+  overflow: visible;
   /* habilita efecto 3D */
 }
 
@@ -346,9 +480,10 @@ p {
   background-position: center;
   cursor: pointer;
   transform-style: preserve-3d;
-  transform: scale(1);
+  transform: scale(1) rotateX('0deg') rotateY('0deg');
   transition: transform 0.4s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  
 }
 
 .card-categoria.visible {
@@ -357,6 +492,7 @@ p {
 }
 
 .card-categoria:hover {
+  transform: scale(1.03) rotateX(0deg) rotateY(0deg);
   box-shadow: 0 0 40px rgba(255, 78, 0, 0.5);
 }
 
@@ -367,12 +503,13 @@ p {
   width: 100%;
   height: 100%;
   padding: 2rem;
+  
   background: rgba(29, 46, 72, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: white;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   opacity: 0;
 }
 
@@ -405,6 +542,20 @@ p {
 @media (max-width: 768px) {
   .grid-categorias {
       grid-template-columns: 1fr;
+      
+  }
+  .card-categoria {
+    transform: none !important;
+  }
+  .panel.portafolio {
+    height: 1500px;
+    min-height: 100vh;
+    padding-bottom: 80px; /* para evitar que quede muy pegado abajo */
+  }
+}
+@media (hover: none) {
+  .card-categoria .overlay {
+    opacity: 1;
   }
 }
 

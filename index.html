@@ -2,251 +2,294 @@
 <html lang="es">
 
 <head>
-    <!-- Meta configuración básica -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kevf Vroxel | Portfolio</title>
+  <!-- Meta configuración básica -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Kevf Vroxel | Portfolio</title>
 
-    <!-- Tipografías: Oswald (títulos) y Lato (textos) -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@600&display=swap"
-        rel="stylesheet" />
+  <!-- Tipografías: Oswald (títulos) y Lato (textos) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@600&display=swap"
+    rel="stylesheet" />
 
-    <!-- Estilos base -->
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Estilos base -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
 <body>
-    <!-- NAVBAR IZQUIERDO (ESCRITORIO) / INFERIOR (MÓVIL) -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#blog-contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR IZQUIERDO (ESCRITORIO) / INFERIOR (MÓVIL) -->
+  <nav class="navbar">
+    <ul>
+      <li><a data-icon="" href="#inicio">Inicio</a></li>
+      <li><a data-icon="" href="#sobre-mi">Sobre mí</a></li>
+      <li><a data-icon="" href="#portafolio">Portafolio</a></li>
+      <li><a data-icon="" href="#servicios">Servicios</a></li>
+      <li><a data-icon="" href="#blog-contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <!-- CONTENEDOR DE TODAS LAS SECCIONES -->
-    <main class="horizontal-scroll-container">
-        <section class="panel inicio horizontal-section" id="inicio">
-            <!-- 🎥 VIDEO DE FONDO -->
-            <video autoplay muted loop playsinline class="video-fondo">
-                <source src="images/1.imagesInicio/videoKevfVroxel.mp4" type="video/mp4">
-                Tu navegador no soporta video HTML5.
-            </video>
+  <!-- CONTENEDOR DE TODAS LAS SECCIONES -->
+  <main class="horizontal-scroll-container">
+    <section class="panel inicio horizontal-section" id="inicio">
+      <!-- 🎥 VIDEO DE FONDO -->
+      <video autoplay muted loop playsinline class="video-fondo">
+        <source src="images/1.imagesInicio/videoKevfVroxel.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
 
-            <!-- 💬 TEXTO Y CTA -->
-            <div class="contenido-inicio">
-                <h1 class="titulo-principal">Kevf Vroxel</h1>
-                <p class="subtitulo">Transformamos ideas en experiencias visuales</p>
-                <button class="cta-btn" onclick="irAContacto()">Contáctame</button>
+      <!-- 💬 TEXTO Y CTA -->
+      <div class="contenido-inicio">
+        <h1 class="titulo-principal">Kevf Vroxel</h1>
+        <h3 class="apellido">Multimedia producer</h3>
+        <p class="subtitulo typewriter">Transformamos ideas en experiencias visuales</p>
+        <button class="cta-btn" onclick="irAContacto()">Contáctame</button>
+      </div>
+    </section>
+
+
+
+    <section class="panel sobre-mi horizontal-section" id="sobre-mi">
+      <!-- Contenedor principal de la sección -->
+      <div class="contenido-sobre-mi">
+
+        <!-- Lado izquierdo: Imagen con animación -->
+        <div class="imagen-sobre-mi">
+          <img src="images/2.imagesSobreMi/logocompleto.png" alt="Foto de Kevf Vroxel" class="foto-animada" />
+        </div>
+
+        <!-- Lado derecho: Descripción + habilidades -->
+        <div class="texto-sobre-mi">
+          <h2 class="titulo-seccion">Sobre mí</h2>
+          <p class="descripcion">
+            Soy Kevf Vroxel, un artista digital y creador multimedia que fusiona tecnología y diseño para
+            dar vida a ideas únicas. Mi enfoque combina precisión técnica con una estética vibrante y
+            moderna.
+          </p>
+
+          <!-- Frase destacada animada -->
+          <p class="frase-impacto">"Transformo ideas en experiencias visuales que inspiran"</p>
+
+          <!-- Habilidades con animaciones -->
+          <div class="habilidades">
+            <div class="card-habilidad">🎨 Diseño Gráfico</div>
+            <div class="card-habilidad">📸 Fotografía Creativa</div>
+            <div class="card-habilidad">🔥 Animación Digital</div>
+            <div class="card-habilidad">💻 Programación Visual</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="panel portafolio horizontal-section" id="portafolio">
+      <div class="contenedor-portafolio">
+        <h2 class="titulo-seccion">Mi Portafolio</h2>
+        <p class="subtitulo">Explora los universos que he creado con diseño, código y creatividad</p>
+
+        <div class="grid-categorias">
+          <!-- Card 1: Diseño Gráfico -->
+          <div class="card-categoria diseño" onclick="window.open('https://link-a-tu-diseño.com')">
+            <div class="overlay">
+              <h3>Diseño Gráfico</h3>
+              <p>Posters, branding y composiciones impactantes.</p>
             </div>
-        </section>
+          </div>
 
-
-
-        <section class="panel sobre-mi horizontal-section" id="sobre-mi">
-            <!-- Contenedor principal de la sección -->
-            <div class="contenido-sobre-mi">
-
-                <!-- Lado izquierdo: Imagen con animación -->
-                <div class="imagen-sobre-mi">
-                    <img src="images/2.imagesSobreMi/logocompleto.png" alt="Foto de Kevf Vroxel" class="foto-animada" />
-                </div>
-
-                <!-- Lado derecho: Descripción + habilidades -->
-                <div class="texto-sobre-mi">
-                    <h2 class="titulo-seccion">Sobre mí</h2>
-                    <p class="descripcion">
-                        Soy Kevf Vroxel, un artista digital y creador multimedia que fusiona tecnología y diseño para
-                        dar vida a ideas únicas. Mi enfoque combina precisión técnica con una estética vibrante y
-                        moderna.
-                    </p>
-
-                    <!-- Frase destacada animada -->
-                    <p class="frase-impacto">"Transformo ideas en experiencias visuales que inspiran"</p>
-
-                    <!-- Habilidades con animaciones -->
-                    <div class="habilidades">
-                        <div class="card-habilidad">🎨 Diseño Gráfico</div>
-                        <div class="card-habilidad">📸 Fotografía Creativa</div>
-                        <div class="card-habilidad">🔥 Animación Digital</div>
-                        <div class="card-habilidad">💻 Programación Visual</div>
-                    </div>
-                </div>
+          <!-- Card 2: Fotografía -->
+          <div class="card-categoria fotografia" onclick="window.open('https://link-a-tu-fotografia.com')">
+            <div class="overlay">
+              <h3>Fotografía</h3>
+              <p>Capturas con intención, estilo y narrativa visual.</p>
             </div>
-        </section>
+          </div>
 
-
-
-
-        <section class="panel portafolio horizontal-section" id="portafolio">
-            <div class="contenedor-portafolio">
-                <h2 class="titulo-seccion">Mi Portafolio</h2>
-                <p class="subtitulo">Explora los universos que he creado con diseño, código y creatividad</p>
-
-                <div class="grid-categorias">
-                    <!-- Card 1: Diseño Gráfico -->
-                    <div class="card-categoria diseño" onclick="window.open('https://link-a-tu-diseño.com')">
-                        <div class="overlay">
-                            <h3>Diseño Gráfico</h3>
-                            <p>Posters, branding y composiciones impactantes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Fotografía -->
-                    <div class="card-categoria fotografia" onclick="window.open('https://link-a-tu-fotografia.com')">
-                        <div class="overlay">
-                            <h3>Fotografía</h3>
-                            <p>Capturas con intención, estilo y narrativa visual.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Animación -->
-                    <div class="card-categoria animacion" onclick="window.open('https://link-a-tu-animacion.com')">
-                        <div class="overlay">
-                            <h3>Animación</h3>
-                            <p>Movimiento que cuenta historias. 2D y 3D.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Programación -->
-                    <div class="card-categoria programacion"
-                        onclick="window.open('https://link-a-tu-programacion.com')">
-                        <div class="overlay">
-                            <h3>Programación</h3>
-                            <p>Interfaces funcionales, visuales e interactivas.</p>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 3: Animación -->
+          <div class="card-categoria animacion" onclick="window.open('https://link-a-tu-animacion.com')">
+            <div class="overlay">
+              <h3>Animación</h3>
+              <p>Movimiento que cuenta historias. 2D y 3D.</p>
             </div>
-        </section>
+          </div>
 
-
-
-
-
-        <section class="panel servicios horizontal-section" id="servicios">
-            <div class="contenedor-servicios">
-                <h2 class="titulo-seccion">Servicios</h2>
-                <p class="subtitulo-seccion">Soluciones creativas para transformar tu visión en realidad digital.</p>
-
-                <div class="grid-servicios">
-                    <!-- Servicio 1 -->
-                    <div class="card-servicio">
-                        <div class="icono-servicio">
-                            <img src="icons/design.svg" alt="Icono diseño gráfico" />
-                        </div>
-                        <h3>Diseño Gráfico</h3>
-                        <p>Identidades visuales únicas, ilustraciones y composiciones creativas adaptadas a tu marca.
-                        </p>
-                    </div>
-
-                    <!-- Servicio 2 -->
-                    <div class="card-servicio">
-                        <div class="icono-servicio">
-                            <img src="icons/video.svg" alt="Icono producción multimedia" />
-                        </div>
-                        <h3>Producción Multimedia</h3>
-                        <p>Animaciones, motion graphics y videos con alto impacto visual y narrativa poderosa.</p>
-                    </div>
-
-                    <!-- Servicio 3 -->
-                    <div class="card-servicio">
-                        <div class="icono-servicio">
-                            <img src="icons/web.svg" alt="Icono desarrollo web" />
-                        </div>
-                        <h3>Desarrollo Web</h3>
-                        <p>Webs visualmente asombrosas y funcionales, optimizadas para rendimiento y experiencia UX.</p>
-                    </div>
-
-                    <!-- Servicio 4 -->
-                    <div class="card-servicio">
-                        <div class="icono-servicio">
-                            <img src="icons/camera.svg" alt="Icono fotografía" />
-                        </div>
-                        <h3>Fotografía Creativa</h3>
-                        <p>Capturamos tu esencia con composición, edición profesional y dirección visual.</p>
-                    </div>
-                </div>
+          <!-- Card 4: Programación -->
+          <div class="card-categoria programacion" onclick="window.open('https://link-a-tu-programacion.com')">
+            <div class="overlay">
+              <h3>Programación</h3>
+              <p>Interfaces funcionales, visuales e interactivas.</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
 
-        <!-- 📚 Sección Final: Blog + Contacto -->
-        <section id="blog-contacto" class="seccion horizontal-section">
-            <div class="contenedor-blog-contacto">
 
-                <!-- 📝 Sub-sección Blog -->
-                <div class="blog">
-                    <h2 class="titulo-seccion">Blog Creativo</h2>
-                    <div class="blog-cards">
-                        <!-- 🃏 Card de blog -->
-                        <article class="blog-card">
-                            <img src="assets/blog1.jpg" alt="Post 1">
-                            <div class="contenido">
-                                <h3>Explorando el Arte Digital</h3>
-                                <p>Reflexiones sobre la transición del arte tradicional a entornos 3D...</p>
-                                <a href="#" class="btn-link">Leer más</a>
-                            </div>
-                        </article>
-                        <!-- Repite si deseas más posts -->
-                    </div>
-                </div>
+    <section class="panel servicios horizontal-section" id="servicios">
+      <div class="contenedor-servicios">
+        <h2 class="titulo-seccion">Servicios</h2>
+        <p class="subtitulo-seccion">Soluciones creativas para transformar tu visión en realidad digital.</p>
 
-                <!-- ✉️ Sub-sección Contacto -->
-                <div class="contacto">
-                    <h2 class="titulo-seccion">Contáctame</h2>
-                    <form id="form-contacto">
-                        <input type="text" name="nombre" placeholder="Tu nombre" required>
-                        <input type="email" name="correo" placeholder="Tu correo" required>
-                        <textarea name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required></textarea>
-                        <button type="submit" class="btn-enviar">Enviar mensaje</button>
-                    </form>
-                </div>
-
+        <div class="grid-servicios">
+          <!-- Servicio 1 -->
+          <div class="card-servicio">
+            <div class="icono-servicio">
+              <img src="icons/design.svg" alt="Icono diseño gráfico" />
             </div>
-        </section>
+            <h3>Diseño Gráfico</h3>
+            <p>Identidades visuales únicas, ilustraciones y composiciones creativas adaptadas a tu marca.
+            </p>
+          </div>
 
-        <footer id="footer">
-            <div class="footer-container">
-                <p>&copy; 2025 Kevf Vroxel. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">Behance</a>
-                    <a href="#" target="_blank">YouTube</a>
-                </div>
+          <!-- Servicio 2 -->
+          <div class="card-servicio">
+            <div class="icono-servicio">
+              <img src="icons/video.svg" alt="Icono producción multimedia" />
             </div>
-        </footer>
+            <h3>Producción Multimedia</h3>
+            <p>Animaciones, motion graphics y videos con alto impacto visual y narrativa poderosa.</p>
+          </div>
 
-    </main>
+          <!-- Servicio 3 -->
+          <div class="card-servicio">
+            <div class="icono-servicio">
+              <img src="icons/web.svg" alt="Icono desarrollo web" />
+            </div>
+            <h3>Desarrollo Web</h3>
+            <p>Webs visualmente asombrosas y funcionales, optimizadas para rendimiento y experiencia UX.</p>
+          </div>
 
-    <!-- Script JS -->
-    <script src="javascript.js"></script>
+          <!-- Servicio 4 -->
+          <div class="card-servicio">
+            <div class="icono-servicio">
+              <img src="icons/camera.svg" alt="Icono fotografía" />
+            </div>
+            <h3>Fotografía Creativa</h3>
+            <p>Capturamos tu esencia con composición, edición profesional y dirección visual.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollContainer = document.querySelector(".horizontal-scroll-container");
 
-            function isMobile() {
-                return window.innerWidth <= 768;
-            }
 
-            if (!isMobile()) {
-                scrollContainer.addEventListener("wheel", function (e) {
-                    // Previene scroll vertical y aplica scroll horizontal
-                    e.preventDefault();
-                    scrollContainer.scrollLeft += e.deltaY;
-                }, { passive: false });
-            }
-        });
-    </script>
+
+    <!-- 📚 Sección Final: Blog + Contacto -->
+    <section id="blog-contacto" class="seccion horizontal-section">
+      <div class="contenedor-blog-contacto">
+
+        <!-- 📝 Sub-sección Blog -->
+        <div class="blog">
+          <h2 class="titulo-seccion">Blog Creativo</h2>
+          <div class="blog-cards">
+            <!-- 🃏 Card de blog -->
+            <article class="blog-card">
+              <img src="assets/blog1.jpg" alt="Post 1">
+              <div class="contenido">
+                <h3>Explorando el Arte Digital</h3>
+                <p>Reflexiones sobre la transición del arte tradicional a entornos 3D...</p>
+                <a href="#" class="btn-link">Leer más</a>
+              </div>
+            </article>
+            <!-- Repite si deseas más posts -->
+          </div>
+        </div>
+
+        <!-- ✉️ Sub-sección Contacto -->
+        <div class="contacto">
+          <h2 class="titulo-seccion">Contáctame</h2>
+          <form id="form-contacto">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Kevf Vroxel. Todos los derechos reservados.</p>
+        <div class="social-links">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Behance</a>
+          <a href="#" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Script JS -->
+  <script src="javascript.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollContainer = document.querySelector(".horizontal-scroll-container");
+
+      function isMobile() {
+        return window.innerWidth <= 768;
+      }
+
+      if (!isMobile()) {
+        scrollContainer.addEventListener("wheel", function (e) {
+          // Previene scroll vertical y aplica scroll horizontal
+          e.preventDefault();
+          scrollContainer.scrollLeft += e.deltaY;
+        }, { passive: false });
+      }
+    });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.querySelectorAll('.card-habilidad');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('visible');
+            }, index * 200);
+          });
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const habilidadesSection = document.querySelector('.habilidades');
+    if (habilidadesSection) {
+      observer.observe(habilidadesSection);
+    }
+  });
+</script>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    document.querySelectorAll('.card-habilidad').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 
 </body>
 
