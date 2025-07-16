@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio Diseño Gráfico | Kevf Vroxel</title>
+  <link rel="stylesheet" href="styles/diseno.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <!-- NAVBAR IZQUIERDO (ESCRITORIO) / INFERIOR (MÓVIL) -->
+      <nav class="navbar">
+        <ul>
+          <li><a data-icon="" href="index.html#inicio">Inicio</a></li>
+          <li><a data-icon="" href="index.html#sobre-mi">Sobre mí</a></li>
+          <li><a data-icon="" href="index.html#portafolio">Portafolio</a></li>
+          <li><a data-icon="" href="index.html#servicios">Servicios</a></li>
+          <li><a data-icon="" href="index.html#blog-contacto">Contacto</a></li>
+        </ul>
+      </nav>
+  
+  <section class="portafolio-dg">
+    <h2 class="titulo">Diseño Gráfico</h2>
+    <p class="descripcion">Explora mis piezas de branding, posters y composiciones visuales.</p>
+
+    <div class="grid-cards-dg">
+      <!-- Card 1 -->
+      <div class="card-dg">
+        <img src="images/diseño1.jpg" alt="Proyecto 1" />
+        <div class="overlay">
+          <h3>Identidad Visual</h3>
+          <p>Diseño de logo y manual de marca para empresa de tecnología.</p>
+          <a href="#" class="btn-ver">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-dg">
+        <img src="images/diseño2.jpg" alt="Proyecto 2" />
+        <div class="overlay">
+          <h3>Poster Cinematográfico</h3>
+          <p>Concepto gráfico para festival de cine independiente.</p>
+          <a href="#" class="btn-ver">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Agrega más cards aquí -->
+    </div>
+  </section>
+
+  <script src="diseno-grafico.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,    // duración de la animación en milisegundos
+      once: true         // si quieres que la animación ocurra solo una vez
+    });
+  </script>
+</body>
+</html>

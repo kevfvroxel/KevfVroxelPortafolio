@@ -97,36 +97,45 @@
 
         <div class="grid-categorias">
           <!-- Card 1: Diseño Gráfico -->
-          <div class="card-categoria diseño" data-aos="zoom-in" data-aos-delay="10" onclick="window.open('https://link-a-tu-diseño.com')">
-            <div class="overlay">
-              <h3>Diseño Gráfico</h3>
-              <p>Posters, branding y composiciones impactantes.</p>
+          <a href="diseno.html">
+            <div class="card-categoria diseño" data-aos="zoom-in" data-aos-delay="10"
+              onclick="window.open.href='diseno.html'">
+              <div class="overlay">
+                <h3>Diseño Gráfico</h3>
+                <p>Posters, branding y composiciones impactantes.</p>
+              </div>
             </div>
-          </div>
+          </a>
 
           <!-- Card 2: Fotografía -->
+          <a href="fotografia.html">
           <div class="card-categoria fotografia" onclick="window.open('https://link-a-tu-fotografia.com')">
             <div class="overlay">
               <h3>Fotografía</h3>
               <p>Capturas con intención, estilo y narrativa visual.</p>
             </div>
           </div>
+          </a>
 
           <!-- Card 3: Animación -->
+          <a href="animacion.html">
           <div class="card-categoria animacion" onclick="window.open('https://link-a-tu-animacion.com')">
             <div class="overlay">
               <h3>Animación</h3>
               <p>Movimiento que cuenta historias. 2D y 3D.</p>
             </div>
           </div>
+          </a>
 
           <!-- Card 4: Programación -->
+          <a href="programacion.html">
           <div class="card-categoria programacion" onclick="window.open('https://link-a-tu-programacion.com')">
             <div class="overlay">
               <h3>Programación</h3>
               <p>Interfaces funcionales, visuales e interactivas.</p>
             </div>
           </div>
+          </a>
         </div>
       </div>
     </section>
@@ -234,7 +243,7 @@
 
   <!-- Script JS -->
   <script src="javascript.js"></script>
- 
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -254,29 +263,29 @@
     });
   </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const cards = entry.target.querySelectorAll('.card-habilidad');
-          cards.forEach((card, index) => {
-            setTimeout(() => {
-              card.classList.add('visible');
-            }, index * 200);
-          });
-        }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.card-habilidad');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, index * 200);
+            });
+          }
+        });
+      }, {
+        threshold: 0.3
       });
-    }, {
-      threshold: 0.3
-    });
 
-    const habilidadesSection = document.querySelector('.habilidades');
-    if (habilidadesSection) {
-      observer.observe(habilidadesSection);
-    }
-  });
-</script>
+      const habilidadesSection = document.querySelector('.habilidades');
+      if (habilidadesSection) {
+        observer.observe(habilidadesSection);
+      }
+    });
+  </script>
 
 
   <script>
@@ -295,13 +304,13 @@
     });
   </script>
 
- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
- <script>
-   AOS.init({
-     duration: 1000,    // duración de la animación en milisegundos
-     once: true         // si quieres que la animación ocurra solo una vez
-   });
- </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,    // duración de la animación en milisegundos
+      once: true         // si quieres que la animación ocurra solo una vez
+    });
+  </script>
 </body>
 
 </html>
